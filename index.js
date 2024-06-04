@@ -21,7 +21,7 @@ function updateScore() {
     scoreElement.textContent = score;
 }
 
-setInterval(updateScore, 50);
+const ponteiro = setInterval(updateScore, 50);
 
 const loop = setInterval(() =>{
 
@@ -44,7 +44,7 @@ const loop = setInterval(() =>{
         cloud.style.right = `${cloudposition}px`
         gameover.style.visibility = 'visible'
         clearInterval(loop);
-
+        clearInterval(ponteiro);
     }
 
 },10)
