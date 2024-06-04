@@ -13,6 +13,15 @@ const jump = () => {
 
     }, 500);
 }
+const scoreElement = document.getElementById('score');
+let score = 0;
+
+function updateScore() {
+    score++;
+    scoreElement.textContent = score;
+}
+
+setInterval(updateScore, 50);
 
 const loop = setInterval(() =>{
 
@@ -35,6 +44,7 @@ const loop = setInterval(() =>{
         cloud.style.right = `${cloudposition}px`
         gameover.style.visibility = 'visible'
         clearInterval(loop);
+
     }
 
 },10)
